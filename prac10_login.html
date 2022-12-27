@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <script type="text/javascript"> 
+        function validate() { 
+            var user = document.getElementById("e").value; 
+            var user2 = document.getElementById("e"); 
+            var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+            if (re.test(user)) { 
+                alert("done"); 
+                return true; 
+            } 
+            else { 
+                user2.style.border = "red solid 7px"; 
+                return false; 
+            } 
+        } 
+    </script> 
+</head> 
+<body bgcolor="cyan"> 
+    <center>  
+        <form> 
+            <fieldset style="width:300px"> 
+                <legend>Registation login</legend> 
+                    <tr> 
+                        <input type="email"placeholder="username@gmail.com" id="e"> 
+                    </tr> 
+                    <br><br> 
+                    <tr> 
+                        <input type="password" placeholder="password"> 
+                    </tr> 
+                    <br><br> 
+                    <tr><input type="submit"onclick="validate()" value="Login"> 
+                    </tr> 
+            </fieldset> 
+        </form> 
+    </center> 
+</body> 
+</html>

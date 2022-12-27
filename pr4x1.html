@@ -1,0 +1,26 @@
+<html>
+<body>
+   <script>
+    function aaa()
+    {
+        const form=document.getElementById("stud");
+        var x = form.elements["uname"].value;
+        document.write(x+"<br>");
+        x=form.elements["tarea"].value;
+        document.write(x+"<br>");
+        x=form.elements["per"].value;
+        document.write(x+"<br>");
+        x=form.elements["radiobutton"].value;
+        document.write(x+"<br>");
+    }
+   </script> 
+   <form id="stud" action="">
+   Name: <input type="text" name="name" id="uname" placeholder="Enter your name"><br><br>
+   Address:<textarea id="tarea" cols="30" rows="4"></textarea><br><br>
+   Percentage: <input type="text" name="name" id="per" placeholder="Enter your percentage"><br><br>
+   Gender:<input type="radio" name="radiobutton" id="radiobutton" value="male"/>Male
+   <input type="radio" name="radiobutton" id="radiobutton" value="female"/>Female<br><br>
+    <input type="button" value="Submit" onclick="aaa()">
+   </form>
+</body>
+</html>

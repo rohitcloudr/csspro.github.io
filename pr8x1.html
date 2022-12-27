@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type = "text/javascript">
+function display() 
+{
+var val=document.getElementById("color").value;
+if(val!="select")
+{
+document.bgColor=val;
+document.cookie = "color=" + val;
+}
+}
+function reload()
+{
+if(document.cookie.length!=0)
+{
+var arr=document.cookie.split(";");
+for(i=0;i<arr.length;i++)
+{
+alert(arr[i]);
+  var cname=arr[i].split("=");
+  alert(cname[0]);
+  if(cname[0]== "color")
+  {
+alert(cname);
+		    document.getElementById("color").value=cname[1];
+document.bgColor=cname[1];
+  }
+}
+}
+}
+</script>
+</head>
+<body onload="reload()">
+<form name = "myform" action="">
+<select id="color" onchange="display()">
+<option value="select">Select Color</option>
+<option value="cyan">cyan</option>
+<option value="gold">Gold</option>
+<option value="orange">orange</option>
+</select>
+</form>
+</body>
+</html>

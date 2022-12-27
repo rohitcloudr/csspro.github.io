@@ -1,0 +1,15 @@
+<html>
+<head>
+<script>
+	function createCookie() 
+	{
+		var x = document.getElementById('myname').value
+		document.cookie = "name=" + x + ";"
+		alert("Cookie Written..")
+	}
+</script>
+</head>
+<body>
+	Enter ur name <input type="text" id="myname" onchange="createCookie()"/>
+</body>
+</html>
